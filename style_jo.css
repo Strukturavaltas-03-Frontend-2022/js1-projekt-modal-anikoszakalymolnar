@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+.header{
+    text-align: center;
+}
+
+.modal {
+    display: none; /* alapból eltűnik */
+    position: fixed;
+    background-color: rgba(0,0,0,0.4); 
+    width: 100%; /* teljes szélsesség és magasságban */
+    height: 100%; 
+    top: 0;
+    left: 0;
+}
+
+/* Sajnos nem sikerült a focusba helyezés. ezek lennének az animációi */
+/*
+.modal:focus {
+    animation: fadeIn 3s;
+}
+
+.modal:not(:focus) {
+    animation: fadeout 3s;
+}
+*/
+
+.modal__doboz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* teljes szélsesség és magasságban */
+}
+
+.modal__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px grey;
+    width: 100%;
+    background-color: white;
+}
+
+/* mobil nézet */
+@media screen and (min-width: 560px) {
+    .modal__container  {
+    width: 50%;
+    }}
+
+
+.modal__container--fade--in {
+    animation: fadeIn 3s;
+}
+
+.modal__container--fade--out {
+    animation: fadeOut 5s;
+}
+
+.modal__doboz--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid gray;
+
+}
+
+.modal__doboz--footer {
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    border-top: 1px solid gray;
+    padding: 15px;
+    
+}
+
+.btn {
+    padding: 1rem;
+    border-radius: 5px;
+    border-width: 0;
+    cursor: pointer;
+    letter-spacing: 0.1em; /* megnyúlik a betű és ez van animálva */
+    transition: 0.5s;
+}
+
+.btn:hover {
+    letter-spacing: 0.25em;
+}
+
+.btn--green {
+    background-color: green;
+    color: white;
+}
+
+.btn--green:active {
+    background-color: yellowgreen;
+}
+
+
+.btn--red {
+    background-color: red;
+    color: white;
+}
+
+.btn--red:active {
+    background-color: orange;
+}
+
+.btn__close {
+    font-size: 2rem;
+    color: #999;
+}
+
+.btn__close:hover, .btn__close:focus {
+  color: #000;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}

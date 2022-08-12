@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_jo.css">
+    <script type="text/javascript" src="js/modal.js"></script>
+    <title>Good day</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Please click the button!</h1>
+        <button class="btn" onclick="showModal('test_modal')">Click here please pleaasseee!</button>
+    </header>
+
+    <!-- modal -->
+    <main>
+        <div class="modal modal__container--fade--in" id="test_modal"> 
+            <div class="modal__doboz">
+                <div class="modal__container">
+                    <div class="modal__doboz--header">
+                        <h2> Dear Reader!</h2>
+                        <span class="btn__close btn_modal-close">&times;</span>
+                    </div>
+                    <div class="modal__doboz--main">
+                        <img src="good_day.jpg" alt="good day" width="50%">
+                    </div>
+                    <div class="modal__doboz--footer">
+                        <button class="btn btn_modal-close btn--green" >OKE, thank you</button>
+                        <button class="btn btn_modal-close btn--red">I have got a terrible day now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
